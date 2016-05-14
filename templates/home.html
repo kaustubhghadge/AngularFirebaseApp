@@ -1,0 +1,63 @@
+
+<div class="panel panel-primary row">
+    <div align="center" class="panel-heading medium-6 columns" style="font-size:large">
+         Product Inventory - A20355295
+    </div>
+
+
+      <div align="center"class="medium-6 columns">
+          <br>
+        <button class="btn btn-success" ng-click="showForm()" ng-hide="addFormShow">Add</button>
+        <button class="btn btn-warning" ng-click="hideForm()" ng-show="addFormShow">Close</button>
+    </div>
+
+
+
+   <div class="panel panel-body ">
+ <div align="center">
+     <br>
+    <form  ng-submit="addFormSubmit()" ng-show="addFormShow" novalidate>
+        <input type="text" ng-model="productName" placeholder="Name" required/>
+        <input type="text" ng-model="productCode" placeholder="Code" />
+        <input type="text" ng-model="description" placeholder="Description" />
+        <input type="number" ng-model="price" placeholder="Price"  min="1" step="any" />
+        <input type="submit" value="Add Product" class="btn btn-default btn-success" />
+        <button class="btn btn-danger" ng-click="cancelAdd()">Cancel</button>
+    </form>
+
+    <form ng-submit="editFormSubmit()" ng-show="editFormShow">
+        <input type="text" ng-model="productName" placeholder="Name" />
+        <input type="text" ng-model="productCode" placeholder="Code" />
+        <input type="text" ng-model="description" placeholder="Description" />
+        <input type="number" ng-model="price" placeholder="Price"  min="1" step="any"    />
+        <input type="submit" value="Edit Product" class="btn btn-default btn-warning" />
+        <button class="btn btn-danger" ng-click="cancelEdit()">Cancel</button>
+    </form>
+  </div>
+
+  <div>
+        <table class="table table-responsive table-hover">
+            <thead class="thead-inverse">
+            <tr>
+                <th>Product</th>
+                <th>Code</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody >
+            <tr ng-repeat="product in products">
+                <td>{{ product.productName}}</td>
+                <td>{{ product.productCode }}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.price | currency }}</td>
+                <td>
+                    <button class="btn btn-primary" ng-click="showProduct(product)" >Edit</button>&nbsp;
+                    <button class="btn btn-danger" ng-click="deleteProduct(product)" >Delete</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+     </div>
+</div>

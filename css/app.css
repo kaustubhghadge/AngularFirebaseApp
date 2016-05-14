@@ -1,0 +1,31 @@
+.panel-heading {background-color: #373A3C!important}
+
+#footer{
+    
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.page-header {
+    padding-bottom: 5px;
+     margin: 0;
+}
+
+.login-box{
+    margin-left:300px;
+}
+
+.box-width{
+    width: 100%;
+
+
+}
+
+.box-move{
+    margin-left:50px;
+
+}
+
+.box-away{
+    margin-left:250px;
+}

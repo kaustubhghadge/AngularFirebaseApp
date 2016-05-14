@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app = "myapp">
+
+  <head>
+    <link data-require="bootstrap-css@3.3.1" data-semver="3.3.1" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/app.css">
+      <!--<link rel="stylesheet" href="css/foundation.css">-->
+  </head>
+
+  <body>
+  <div class="page-header" align="center">
+    <h1>ITMD-565 Final Project <br>&nbsp;
+    <small>-Using Angular and Firebase</small></h1>
+  </div>
+  <section ng-view>
+  </section>
+  <div align="center">
+      <hr>
+  <footer>
+    <p>&copy; Kaustubh Ghadge</p>
+  </footer>
+  </div>
+<script src="https://code.angularjs.org/1.4.4/angular.js"></script>
+<script src="https://code.angularjs.org/1.4.4/angular-route.js"></script>
+  <script src="https://code.angularjs.org/1.4.5/angular-messages.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+
+    <script src="js/main.js"></script>
+<script src="controllers/login-controller.js"></script>
+<script src="controllers/home-controller.js"></script>
+  </body>
+
+</html>
